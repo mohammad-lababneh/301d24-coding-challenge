@@ -30,12 +30,7 @@ Output: ['a','b','c','d','e','f']
 ------------------------------------------------------------------------------------------------ */
 
 const addInTheMiddle = (arr, val) => {
-    var length = arr.length;
-    for(i = length -1; i >= val; i--){
-        arr[length] = arr[i];
-        length--;
-    };
-    arr[val] = arr;
+    arr.splice((arr.length/2),0,val)
     return arr
 };
 
